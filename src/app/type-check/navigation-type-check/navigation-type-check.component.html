@@ -1,0 +1,9 @@
+<div *ngFor="let item of itemsToDrop"
+  [dragDirective]='item'
+  [dragHightlight]="'highlight'"
+  (releaseDrop)="releaseDrop($event)"
+  class="dragItem"
+  [ngClass]="{'dragItem-round':item.type===0,'dragItem-square':item.type===1}"
+  (startDrag)="startDrag(item)">
+  <app-generic-box [genericBox]='item'></app-generic-box>
+</div>

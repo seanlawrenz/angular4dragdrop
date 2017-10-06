@@ -1,0 +1,18 @@
+<p>
+  Match Shapes<br>
+  {{warningMessage}}
+</p>
+<div dropDirective (dropEvent)="addDropItem($event,typeCheck.Round)" 
+  (dragenterEvent)="dragEnter($event, typeCheck.Round)"
+  (dragleaveEvent)="dragLeave()"
+  class="droppable round-hole"
+  [ngClass]="highlight[typeCheck.Round]">
+  <app-generic-box *ngFor="let item of itemsDroppedRound" [genericBox]="item"></app-generic-box>
+</div>
+<div dropDirective (dropEvent)="addDropItem($event,typeCheck.Square)" 
+  (dragenterEvent)="dragEnter($event, typeCheck.Square)"
+  (dragleaveEvent)="dragLeave()"
+  class="droppable square-hole"
+  [ngClass]="highlight[typeCheck.Square]">
+  <app-generic-box *ngFor="let item of itemsDroppedSquare" [genericBox]="item"></app-generic-box>
+</div>

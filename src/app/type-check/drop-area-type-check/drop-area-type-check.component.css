@@ -1,0 +1,20 @@
+.droppable{
+  padding:10px;
+  border: 1px solid #aaa;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.highlight{
+  border: 1px solid #0f0;
+}
+
+.badhighlight{
+  border: 1px solid red;
+}
+
+.round-hole{
+  border-radius: 50px;
+}
